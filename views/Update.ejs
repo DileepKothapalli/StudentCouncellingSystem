@@ -1,0 +1,94 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="bootstrap-4.4.1-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="css/style4.css">
+    <title>Update</title>
+</head>
+<body>
+    <div class="container-fluid top">
+        <div class="heading">
+            Student Councelling
+        </div>
+    </div>
+    <nav class="navbar navbar-light bg-light">
+        <form class="form-inline" >
+            <a class="nav-link" href="/Admin">Home</a>
+            <a class="nav-link " href="/Update">Update</a>
+           
+            <a class="nav-link" href="/logout">Logout</a>
+        </form>
+    </nav>
+    <div class="container-fluid">     
+        <div class="input-group">
+            <input type="text" class="form-control" placeholder="Search" aria-label="Search">                    
+            <div class="input-group-append">
+                <button class="btn btn-success" type="button">Go</button>
+            </div>
+            <div><button class="btn btn-danger">Clear Filter</button></div>
+        </div>
+    </div>
+    <div class="text-center">
+        <a href="/addnew" class="btn btn-outline-success">Add an Institute</a>
+        <a href="./Admin" class="btn btn-outline-success">Save and goto Home</a>
+    </div>
+
+   
+    
+    
+    <div class=" container-fluid table-responsive rc">
+        <div class="row">
+            <div class="col">
+                <table class="table table-bordered">
+                    <thead class="thead-light" >
+                        <tr>
+                            <th class="sticky-top" scope="col">SrNo.</th>
+                            <th class="sticky-top" scope="col">Institute</th>
+                            <th class="sticky-top" scope="col">Program</th>
+                            <th class="sticky-top" scope="col">Seats</th>
+                            <th class="sticky-top" scope="col">Update</th>
+                            <th class="sticky-top" scope="col">Delete</th>
+
+                        </tr>
+                    </thead>
+
+
+                    <tbody>
+                        <%  for(var k=0 ; k < list.length ; k++ ) { %>
+                           
+                            <tr>
+                                
+                                <td><%= k+1 %></td>    
+                                <td> <%= list[k].Institute %> </td>
+                                <td><%= list[k].Course %> </td>
+                                <td><%= list[k].Seats %></td>    
+                                <td>
+                                 <a href="/Updateseatsg/<%= list[k].ID %> " class="btn btn-secondary"> Update </a>
+                                 </td>
+                                 <td>
+                                 
+                                 <a href="/deleteinsti/<%= list[k].ID %> " class="btn btn-danger"> Remove </a>
+                                 </td>
+                               
+                               
+                            </tr>
+
+                               
+                        <% }; %>
+                            
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+
+
+
+    
+
+
+
+</body>
+</html>

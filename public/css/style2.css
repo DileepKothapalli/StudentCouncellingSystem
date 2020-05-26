@@ -1,0 +1,50 @@
+
+.heading{
+    font-size: 60px;
+    padding-left: 20%;
+    padding-right: 10%;
+}
+.top{
+    background-color: #eee;
+}
+.form-inline{
+    padding-left: 200px;
+}
+.list-group{
+    margin-top: 20px;
+    padding-right: 30px;
+    padding-left: 20px;
+}
+
+.list-inline-item
+{
+    position: relative;
+    padding: 0.75rem;
+    border-radius: 0.25rem;
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+}
+
+.list-inline
+{
+    padding: 0px 0px;
+    margin-bottom: 0px;
+}
+.roll
+{
+    float: right;
+}
+.tot
+{
+    padding-top: 20px;
+}
+.input-group
+{
+    margin-top: 16px ;
+}
+.table
+{
+    border-radius: 10px !important;
+    margin-top: 10px;
+    margin-right: 1rem;
+}

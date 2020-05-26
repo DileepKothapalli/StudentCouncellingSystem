@@ -1,0 +1,62 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="bootstrap-4.4.1-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="css/style6.css">
+    <title>Home</title>
+</head>
+<body>
+    <div class="container-fluid top">
+        <div class="heading">
+            Student Councelling
+        </div>
+    </div>
+    <nav class="navbar navbar-light bg-light">
+        <form class="form-inline" >
+            <a class="nav-link " href="/Admin">Home</a>
+            <a class="nav-link " href="/Update">Update</a>
+            <a class="nav-link " href="/logout">Logout</a>
+        </form>
+    </nav>
+    <div class="col">
+
+        <div class="container-fluid ">
+
+        <% if(message == " enter proper details ") { %>
+        <div class="alert alert-danger">
+            Enter Institute name and Course
+        </div>
+        <% } %>
+        <% if(message == "Succesfully Added") { %>
+            <div class="alert alert-success">
+                <%= message%>
+            </div>
+            <% } %>
+
+            <div >
+                
+                    <form action="/addnew" method="POST" class="">
+                    <div class="form-group">
+                        <label for="email">Institute Name</label>
+                        <input type="text" class="form-control" name="institute" placeholder="Enter Institute ">
+                    </div>
+                    <div class="form-group">
+                        <label for="Contact">Course</label>
+                        <input type="text" class="form-control" name="course" placeholder="Enter Course">
+                    </div>
+                    <div class="form-group">
+                        <label for="Contact">Seats</label>
+                        <input type="text" class="form-control" name="seats" placeholder="Enter no of Seats">
+                    </div>
+                    <input id="btn-register" type="submit" class="btn btn-primary" value="Submit">
+                    </form>
+            </div>
+        </div>
+
+
+    </div>
+    
+</body>
+</html>

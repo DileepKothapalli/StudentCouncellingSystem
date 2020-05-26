@@ -1,0 +1,103 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="bootstrap-4.4.1-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="css/style4.css">
+    <title>Choice rearrange</title>
+</head>
+<body>
+    <div class="container-fluid top">
+        <div class="heading">
+            Student Councelling
+        </div>
+    </div>
+    <nav class="navbar navbar-light bg-light">
+        <form class="form-inline" >
+            <a class="nav-link" href="./home">Home</a>
+            <a class="nav-link " href="./filling_choices">Choice filling</a>
+            <a class="nav-link" href="./arrange_choice">Choice rearrange</a>
+            <a class="nav-link" href="./arrange_choice">Lock Choices</a>
+            <a class="nav-link" href="./">Logout</a>
+        </form>
+    </nav>
+    <div class="container-fluid">     
+       
+        <form action="/searchr" method="post" >
+            <div  class="input-group ">
+                
+                <input type="text" class="form-control" name="search" placeholder="Search" style="width: 900px;">                    
+                    <div class="input-group-append">
+                        <button type="submit" class="btn btn-success" value="Go">Go</button>
+                    </div>
+            
+            </div>
+        </form>
+
+    </div>
+    <div class="text-center">
+        <button class="btn btn-outline-success justify-content-center">Save and Continue</button>
+        <a href="./home.html" class="btn btn-outline-success">Save and goto Home</a>
+    </div>
+
+   
+    
+    
+    <div class=" container-fluid table-responsive rc">
+        <div class="row">
+            <div class="col">
+                <table class="table table-bordered">
+                    <thead class="thead-light" >
+                        <tr>
+                            <th class="sticky-top" scope="col">SrNo.</th>
+                            <th class="sticky-top" scope="col">Institute</th>
+                            <th class="sticky-top" scope="col">Program</th>
+                            <th class="sticky-top" scope="col">Choice No.</th>
+                            <th class="sticky-top" scope="col">Remove</th>
+                            <th class="sticky-top" scope="col">Up</th>
+                            <th class="sticky-top" scope="col">Down</th>
+
+                        </tr>
+                    </thead>
+
+
+                    <tbody>
+                        <%  for(var k=0,l=0 ; k < list.length ; k++ ) { %>
+                            <% if(list[k].PREFERENCE != 0) { %>
+                                <% l++ %>
+                            <tr>
+                                
+                                <td><%= l %></td>    
+                                <td> <%= list[k].INSTITUTE %> </td>
+                                <td><%= list[k].COURSE %> </td>
+                                <td><%= list[k].PREFERENCE %></td>    
+                                <td>
+                                 <a href="/delete1/<%= list[k].ID %> " class="btn btn-danger"> Remove </a>
+                                 </td>
+                                 <td>
+                                 <a href="/Up1/<%= list[k].ID %> " class="btn btn-warning"> Up </a>
+                                 </td>
+                               
+                                <td>
+                                 <a href="/Down1/<%= list[k].ID %> " class="btn btn-warning"> Down </a>
+                                 </td>
+                            </tr>
+
+                            <% } %>    
+                        <% }; %>
+                            
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+
+
+
+    
+
+
+
+</body>
+</html>

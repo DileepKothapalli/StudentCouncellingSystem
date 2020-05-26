@@ -1,0 +1,82 @@
+
+.heading{
+    font-size: 60px;
+    padding-left: 20%;
+    padding-right: 10%;
+}
+.top{
+    background-color: #eee;
+}
+.form-inline{
+    padding-left: 200px;
+}
+.list-group{
+    margin-top: 20px;
+    padding-right: 30px;
+    padding-left: 20px;
+}
+
+.list-inline-item
+{
+    position: relative;
+    padding: 0.75rem 1.25rem;
+    border-radius: 0.25rem;
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+}
+
+.list-inline
+{
+    padding: 0px 0px;
+    margin-bottom: 0px;
+}
+.bg
+{
+    margin-top: 30px;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+.roll
+{
+    float: right;
+}
+.cls
+{
+    float: right;
+}
+.nb
+{
+    background-color: #eee;
+    padding: 10px 10px !important;
+}
+.tot
+{
+    padding-top: 20px;
+}
+
+.fc{
+
+    margin-top: 50px;
+}
+.rc{
+
+    margin-right: 20px;
+    margin-top: 20px;
+    
+}
+
+.th1{
+    width:20%;
+    font-weight:700 !important;
+    color:black !important ;
+}
+.td1{
+    font-weight:500;
+}
+.th2{
+    width:20%;
+}
+
+.form-control {
+    width:300px !important;
+}

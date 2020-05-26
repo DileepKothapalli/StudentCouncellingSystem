@@ -1,0 +1,83 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="bootstrap-4.4.1-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="css/style5.css">
+    <script src="../bootstrap-4.4.1-dist/js/bootstrap.min.js"></script>
+    <title>Choice rearrange</title>
+</head>
+<body>
+    <div class="container-fluid top">
+        <div class="heading">
+            Student Councelling
+        </div>
+    </div>
+    <nav class="navbar navbar-light bg-light">
+        <form class="form-inline" >
+            <a class="nav-link" href="./home">Home</a>
+            <a class="nav-link " href="./filling_choices">Choice filling</a>
+            <a class="nav-link" href="./arrange_choice">Choice rearrange</a>
+            <a class="nav-link" href="./multiple_deletion">Multiple deletion</a>
+            <a class="nav-link" href="./multiple_deletion">Lock Choices</a>
+            <a class="nav-link" href="./">Logout</a>
+        </form>
+    </nav>
+    <div class="container-fluid">     
+        <div class="input-group">
+            <input type="text" class="form-control" placeholder="Search" aria-label="Search">                    
+            <div class="input-group-append">
+                <button class="btn btn-success" type="button">Go</button>
+            </div>
+            <div><button class="btn btn-danger">Clear Filter</button></div>
+        </div>
+    </div>
+    <div class="text-center">
+        <button class="btn btn-outline-danger justify-content-center">Delete selected</button>
+        
+    </div>
+
+   
+    
+    
+    <div class=" container-fluid table-responsive rc">
+        <div class="row">
+            <div class="col">
+                <table class="table table-bordered">
+                    <thead class="thead-light" >
+                        <tr>
+                            <th class="sticky-top" scope="col">SrNo.</th>
+                            <th class="sticky-top"><input type="checkbox" id="selectAll" > Check all</th>
+                            <th class="sticky-top" scope="col">Institute</th>
+                            <th class="sticky-top" scope="col">Program</th>
+                            
+                        </tr>
+                    </thead>
+
+
+                    <tbody>
+                        <% list.forEach(function(ele,index) { %>
+                            <tr>
+                                <td><%= index + 1 %></td>
+                                <td><input type="checkbox"/> </td>            
+                                <td><%= ele['INSTITUTE']%> </td>
+                                <td><%= ele['COURSE']%> </td> 
+                            </tr>
+                            <% }); %>
+                            
+                    </tbody>
+
+                    
+
+                </table>
+            </div>
+        </div>
+
+
+
+</body>
+</html>
+
+
+

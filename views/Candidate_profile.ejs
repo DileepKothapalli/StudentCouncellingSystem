@@ -1,0 +1,104 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="bootstrap-4.4.1-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="css/style6.css">
+    <title>Home</title>
+</head>
+<body>
+    <div class="container-fluid top">
+        <div class="heading">
+            Student Councelling
+        </div>
+    </div>
+    <nav class="navbar navbar-light bg-light">
+        <form class="form-inline" >
+            <a class="nav-link " href="./home">Home</a>
+            <a class="nav-link " href="/changepassword">Change Password</a>
+            <a class="nav-link " href="/logout">Logout</a>
+        </form>
+    </nav>
+    <div class="col">
+
+        <div class="container-fluid table-responsive fc">
+            <div class="row">
+                <div class="col">
+                    <table class="table table-bordered ">
+                        <thead class="thead-light" >
+                            <tr>
+                                <th class="sticky-top th1" scope="col">Personal Details</th>
+                                <th class="sticky-top" scope="col"></th>
+                                <th class="sticky-top th1" scope="col"></th>
+                                <th class="sticky-top th2" scope="col"></th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td class="td1">Candidate Name</td>
+                                <td> <%=  profile[0].Fullname %></td> 
+                                <td class="td1">Roll Number</td>
+                                <td><%=  profile[0].Rollnumber %></td>
+                            </tr>
+                       
+                            
+                            
+
+                             <tr>
+                                <td class="td1">Email</td>
+                                <td><%=  profile[0].Email %></td> 
+                                <td class="td1">Contact No</td>
+                                <td><%=  profile[0].Contact %></td> 
+                            </tr>
+                          
+                    </tbody>
+
+
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid table-responsive rc">
+            <div class="row">
+                <div class="col">
+                    <table class="table table-bordered">
+                        <thead class="thead-light" >
+                            <tr>
+                                <th class="sticky-top th1" scope="col">Allotment Details</th>
+                                <th class="sticky-top" scope="col"></th>
+                                <th class="sticky-top th1" scope="col"></th>
+                                <th class="sticky-top th2" scope="col"></th>
+
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td class="td1">Institute Alloted</td>
+                                <td><%=  profile[0].institute %></td> 
+                                <td class="td1">Academic Program Alloted</td>
+                                <td><%=  profile[0].course %></td> 
+                            </tr>
+                            <tr>
+                                <td class="td1">Choice No</td>
+                                <td><%=  profile[0].choice %></td> 
+                                <td class="td1">Rank Used for Allotment</td>
+                                <td><%=  profile[0].Rank %></td> 
+                            </tr>
+                            
+                        
+                    </tbody>
+
+
+                    </table>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    
+</body>
+</html>

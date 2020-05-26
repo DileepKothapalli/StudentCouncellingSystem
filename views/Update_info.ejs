@@ -1,0 +1,61 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="bootstrap-4.4.1-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="css/style6.css">
+    <title>Home</title>
+</head>
+<body>
+    <div class="container-fluid top">
+        <div class="heading">
+            Student Councelling
+        </div>
+    </div>
+    <nav class="navbar navbar-light bg-light">
+        <form class="form-inline" >
+            <a class="nav-link " href="./home">Home</a>
+            <a class="nav-link " href="./changepassword">Change Password</a>
+            <a class="nav-link " href="/logout">Logout</a>
+        </form>
+    </nav>
+    <div class="col">
+
+        <% if(message == "Enter details to update") { %>
+        <div class="alert alert-danger">
+            <%= message%>
+        </div>
+
+        <% } %>
+
+        <% if(message == "Details updated Succcesfully") { %>
+            <div class="alert alert-success">
+                <%= message%>
+            </div>
+    
+            <% } %>
+
+        <div class="container-fluid ">
+            <div >
+                
+                    <form action="/update" method="POST" class="">
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" class="form-control" name="email1" placeholder="Enter Email">
+                    </div>
+                    <div class="form-group">
+                        <label for="Contact">Contact No</label>
+                        <input type="text" class="form-control" name="contact" placeholder="Enter Contact No">
+                    </div>
+                    
+                    <input id="btn-register" type="submit" class="btn btn-primary" value="Submit">
+                    </form>
+            </div>
+        </div>
+
+
+    </div>
+    
+</body>
+</html>

@@ -2,14 +2,12 @@ const path = require('path')
 const sessionstorage = require('sessionstorage')
 
 
-
 module.exports =  class Router{
 
     ///user page
     index = (req,res,next) => {
             res.render(path.join(__dirname,"../views","index.ejs"),{message :""} )
         }
-
 
     ///Admin pages
     Admin = (req,res,next) => {
